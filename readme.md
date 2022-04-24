@@ -15,18 +15,18 @@
 | Терминация HTTPS                  | +                                                                                                                              | +                                                                                             | +                                                                                             | +                                                                                                    | +                                                                                                         | +                             |
 | Квотирование и лимиты для трафика | +                                                                                                                              | +                                                                                             | +                                                                                             | +                                                                                                    | +                                                                                                         | +                             |
 
-Еще:
-Google Cloud Endpoints: Endpoints is a lighter version of Apigee by Google Cloud. For Google Cloud backend.
-KrakenD: Ultra-high performance open-source API Gateway. KrakenD claims to be faster than Kong and Tyk.
-Goku: Golang-based microservice gateway that enables high-performance dynamic routing, service orchestration, multi-tenancy management, API access control, etc.
-Gloo: next-generation fully featured API gateway and Ingress Controller for cloud-native environments. With Developer portal, WAF, Data loss prevention. Envoy Proxy
-Fusio: It is not limited to proxy requests to another API. It provides a simple and intuitive backend to control and manage your API.
+Еще:  
+Google Cloud Endpoints: Endpoints is a lighter version of Apigee by Google Cloud. For Google Cloud backend.  
+KrakenD: Ultra-high performance open-source API Gateway. KrakenD claims to be faster than Kong and Tyk.  
+Goku: Golang-based microservice gateway that enables high-performance dynamic routing, service orchestration, multi-tenancy management, API access control, etc.  
+Gloo: next-generation fully featured API gateway and Ingress Controller for cloud-native environments. With Developer portal, WAF, Data loss prevention. Envoy Proxy  
+Fusio: It is not limited to proxy requests to another API. It provides a simple and intuitive backend to control and manage your API.  
 WSO2: full lifecycle API Management solution. It comprises a cloud-native API gateway and provides a Kubernetes operator to convert raw microservices into managed APIs easily.
 
-В общем случае выбираем Kong как наиболее распространенный, функциональный, Apache 2.0 и достаточно производительный (https://www.krakend.io/docs/benchmarks/api-gateway-benchmark/).
-Если обслуживаемая инфраструктура с несложной и достаточно статичной схемой маршрутизации, можно использовать Nginx.
-Если инфраструктура в облаке и не требуется специфичных функций от API Gateway, можно использовать решение от облачного провайдера.
-Если критична максимальная производительность, рассмотреть KrakenD.
+В общем случае выбираем **Kong** как наиболее распространенный, функциональный, со свободной лицензией Apache 2.0 и достаточно производительный (см. https://www.krakend.io/docs/benchmarks/api-gateway-benchmark/).  
+Если обслуживаемая инфраструктура с несложной и достаточно статичной схемой маршрутизации, можно использовать Nginx.  
+Если инфраструктура в облаке и не требуется специфичных функций от API Gateway, можно использовать решение от облачного провайдера.  
+Если критична максимальная производительность, рассмотреть KrakenD.  
 Если требуется встроенный биллинг, рассмотреть решения с его поддержкой.
 
 
@@ -43,8 +43,8 @@ WSO2: full lifecycle API Management solution. It comprises a cloud-native API ga
 | Тип хранения                                                      | Постоянное, временное                                                                                                                | Постоянное                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Временное                                                                                               | Временное                                                                                                                                                                           |
 | Тип доставки                                                      | one-to-one, one-to-many (Push: Point-to-Point, Publish/Subscribe)                                                                    | Pull with 'long polling' improvment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | one-to-one, one-to-many                                                                                 | Synchronous Request/Response<br>Asynchronous Request/Response<br>Publish/Subscribe<br>Push/Pull<br>Exclusive Pair                                                                   |
 
-Больше: https://ultimate-comparisons.github.io/ultimate-message-broker-comparison/
-Apache Kafka, как решение с выдающейся производительностью, хранением данных на диске, которое предпочитают и используют множество крупных компаний (More than 80% of all Fortune 100 companies use Kafka.). Любые форматы данных, поддерживаемые клиентским ПО. Модуль Authorizer позволяет ограничить доступ к ресурсам по ACL (требуется ZooKeeper).
+Больше: https://ultimate-comparisons.github.io/ultimate-message-broker-comparison/  
+В итоге выбираем **Apache Kafka**, как решение с выдающейся производительностью, хранением данных на диске, которое предпочитают и используют множество крупных компаний (More than 80% of all Fortune 100 companies use Kafka.). Любые форматы данных, поддерживаемые клиентским ПО. Модуль Authorizer позволяет ограничить доступ к ресурсам по ACL (требуется ZooKeeper).
 
 
 
